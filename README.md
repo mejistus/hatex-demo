@@ -8,7 +8,7 @@ The page is typeset in the browser from [`diffusion.tex`](diffusion.tex) by [hat
 index.html      title block, page styles (black on white), render call
 diffusion.tex   the note
 tikz/           pre-rendered TikZ figures (<hash>.svg), so readers don't wait for TeX
-hatex/          hatex.js + hatex.css (v1.1.1)
+hatex/          hatex.js + hatex.css (v1.1.2)
 ```
 
 To preview it locally, run `python3 -m http.server` and open <http://localhost:8000/>.
