@@ -8,7 +8,7 @@ Three documents typeset in the browser by [hatex](https://mejistus.github.io/hat
 | [`zh/`](zh/) | [`sishu.tex`](zh/sishu.tex) | Chinese typesetting: 《论语》 and 《大学》, footnotes, `multicols`, a table, maths in Chinese |
 | [`slides/`](slides/) | [`slides.tex`](slides/slides.tex) | A beamer deck with blocks, columns and a full-screen presenter |
 
-There is no build step. Each `index.html` fetches its `.tex` file and renders it with `lib/hatex.js` (hatex 1.2.1). Each `tikz/` folder holds the pre-rendered TikZ figures (`<hash>.svg`), so readers never wait for TeX.
+There is no build step. Each `index.html` fetches its `.tex` file and renders it with `lib/hatex.js` (hatex 1.2.2). Each `tikz/` folder holds the pre-rendered TikZ figures (`<hash>.svg`), so readers never wait for TeX.
 
 This repository is a git submodule of [mejistus.github.io](https://github.com/mejistus/mejistus.github.io) at `hatex/demo`. After pushing a change here, update the submodule pointer there so the site picks it up:
 
