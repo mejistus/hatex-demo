@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中文排版示例：《论语》与《大学》</title>
+<meta name="description" content="hatex 中文排版演示：引文与脚注、原文译文双栏对照、表格、TikZ 图、数学公式与命题、参考文献。">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<link rel="stylesheet" href="../lib/hatex.css">
+<style>
+  :root {
+    color-scheme: light;
+    --song: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Noto Serif SC", STSong, SimSun, serif;
+  }
+  body {
+    margin: 0;
+    background: #fff;
+    color: #000;
+    font: 17px/1.8 var(--song);
+  }
+  main { max-width: 44rem; margin: 0 auto; padding: 3.5rem 1.25rem 4rem; }
+  a { color: #000; }
+  .nav { font-size: 0.85rem; margin: 0 0 2rem; }
+
+  header { text-align: center; margin-bottom: 2.5rem; }
+  .title { font-size: 1.9rem; font-weight: bold; line-height: 1.35; margin: 0 0 1rem; }
+  .authors { font-size: 1.1rem; margin: 0; }
+  .links { margin: 0.8rem 0 0; }
+
+  /* hatex, in black on white */
+  .hatex {
+    --hx-ink: #000;
+    --hx-muted: #000;
+    --hx-accent: #000;
+    --hx-accent-2: #000;
+    --hx-code-bg: #f6f6f6;
+    --hx-border: #bbb;
+    --hx-paper: #fff;
+    --hx-font-heading: var(--song);
+    --hx-font-sans: var(--song);
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .hatex p, .hatex li { text-align: justify; }
+  .hatex p { margin-bottom: 0.9rem; }
+  .hatex h2 { font-size: 1.3rem; border: 0; padding: 0; margin: 2.2rem 0 0.7rem; }
+  .hatex h3 { font-size: 1.1rem; }
+  .hatex .latex-secnum { margin-right: 0.8em; }
+  .hatex .latex-abstract { max-width: none; margin: 0 2rem 2.2rem; font-size: 0.95rem; }
+  .hatex blockquote { font-style: normal; border-left: 2px solid #000; }
+  .hatex a { text-decoration: none; }
+  .hatex a:hover { text-decoration: underline; }
+  .hatex .latex-cite-link { border: 0; padding: 0; }
+  .hatex .latex-cite-link:hover { background: none; }
+  .hatex code { background: none; padding: 0; font-size: 0.85em; }
+  .hatex .latex-float figcaption { text-align: justify; font-size: 0.9rem; }
+  .hatex .latex-cap-label { font-weight: bold; }
+  .hatex .latex-theorem.latex-thm p { font-style: normal; }
+  .hatex .latex-list dt { font-weight: bold; }
+  .hatex .hatex-multicols { margin: 0.5rem 0 1rem; padding: 0.8rem 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+  .hatex .hatex-multicols p { margin-bottom: 0.4rem; text-align: left; }
+
+  footer { margin-top: 3rem; font-size: 0.85rem; text-align: center; }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    main { padding-top: 2rem; }
+    .title { font-size: 1.5rem; }
+    .hatex .latex-abstract { margin: 0 0 2rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="nav"><a href="../">← hatex demos</a></p>
+  <header>
+    <h1 class="title">中文排版示例：《论语》与《大学》</h1>
+    <p class="authors">Mejistus</p>
+    <p class="links">[<a href="sishu.tex">LaTeX 源文件</a>]</p>
+  </header>
+
+  <article id="doc">
+    <noscript>本页由 JavaScript 从 <a href="sishu.tex">sishu.tex</a> 渲染。</noscript>
+  </article>
+
+  <footer>本页由 <a href="../../">hatex</a> 在浏览器中从 <a href="sishu.tex">sishu.tex</a> 排版。</footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="../lib/hatex.js"></script>
+<script>
+  fetch('sishu.tex')
+    .then(r => r.text())
+    .then(tex => HaTeX.render('#doc', tex, { tikzSvgBase: 'tikz/', animate: false }));
+</script>
+</body>
+</html>
