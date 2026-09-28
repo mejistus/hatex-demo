@@ -23,7 +23,10 @@
     font: 17px/1.8 var(--song);
   }
   main { max-width: 52rem; margin: 0 auto; padding: 3.5rem 1.25rem 4rem; }
-  .hatex .hatex-guji { --hx-guji-paper: #fbf8f1; }
+  /* The text fills the window: wide leaves, large characters. */
+  main.wide { max-width: 76rem; }
+  .hatex .hatex-guji { --hx-guji-paper: #fbf8f1; font-size: 1.55rem; }
+  @media (max-width: 600px) { .hatex .hatex-guji { font-size: 1.2rem; } }
   a { color: #000; }
   .nav { font-size: 0.85rem; margin: 0 0 2rem; }
 
@@ -75,7 +78,7 @@
 </style>
 </head>
 <body>
-<main>
+<main class="wide">
   <p class="nav"><a href="../">← HaTeX demos</a></p>
   <header>
     <h1 class="title">洛陽伽藍記序</h1>

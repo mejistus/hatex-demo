@@ -19,6 +19,11 @@
   li { padding: 1rem 0; border-top: 1px solid #ddd; }
   li:last-child { border-bottom: 1px solid #ddd; }
   li a { font-size: 1.1rem; font-weight: 600; }
+  .kind {
+    display: inline-block; margin-right: 0.55rem; padding: 0.05rem 0.45rem; vertical-align: 0.12em;
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+    color: #555; border: 1px solid #ccc; border-radius: 0.25rem;
+  }
   li p { margin: 0.3rem 0 0; color: #555; font-size: 0.95rem; }
   code { font: 0.88em ui-monospace, "SF Mono", Menlo, monospace; }
   footer { margin-top: 2.5rem; font-size: 0.85rem; color: #555; }
@@ -30,16 +35,19 @@
   <p class="lead">Each page fetches one <code>.tex</code> file and typesets it in your browser with <a href="../">HaTeX</a>.</p>
   <ul>
     <li>
+      <span class="kind">Paper</span>
       <a href="paper/">Denoising Diffusion Models, Derived</a>
       <p>A two-column paper (<code>\documentclass[twocolumn]</code>): propositions and proofs, numbered equations, TikZ and pgfplots figures, algorithms, code, references.</p>
     </li>
     <li>
-      <a href="zh/">洛陽伽藍記序</a>
-      <p>A classical Chinese text set like an old book (<code>\begin{guji}</code>): vertical columns from right to left in traditional characters, ruled like a manuscript scroll, with two-line interlinear notes (<code>\jiazhu</code>) and 句讀 marks in place of punctuation.</p>
-    </li>
-    <li>
+      <span class="kind">Slides</span>
       <a href="slides/">HaTeX slides</a>
       <p>A beamer deck (<code>\documentclass{beamer}</code>): title page, outline, blocks, columns, maths, code and a full-screen presenter.</p>
+    </li>
+    <li>
+      <span class="kind">Classical Chinese</span>
+      <a href="zh/">洛陽伽藍記序</a>
+      <p>A classical Chinese text set like an old book (<code>\begin{guji}</code>): vertical columns from right to left in traditional characters, ruled like a manuscript and set in leaves as wide as the window, with two-line interlinear notes (<code>\jiazhu</code>) and 句讀 marks in place of punctuation.</p>
     </li>
   </ul>
   <footer>Sources: <a href="https://github.com/mejistus/hatex-demo">github.com/mejistus/hatex-demo</a> (these pages) and <a href="https://github.com/mejistus/hatex">github.com/mejistus/hatex</a> (HaTeX itself), MIT License.</footer>
