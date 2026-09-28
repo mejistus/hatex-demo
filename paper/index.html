@@ -11,15 +11,16 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
 <link rel="stylesheet" href="../lib/hatex.css">
+<link rel="stylesheet" href="../theme.css">
+<script src="../theme.js"></script>
 <style>
   :root {
-    color-scheme: light;
     --serif: KaTeX_Main, "Latin Modern Roman", "Times New Roman", serif;
   }
   body {
     margin: 0;
-    background: #fff;
-    color: #000;
+    background: var(--bg);
+    color: var(--fg);
     font: 18px/1.55 var(--serif);
   }
   /* Two columns on a wide screen (the source says \documentclass[twocolumn]),
@@ -32,7 +33,7 @@
   @media (max-width: 999px) {
     main { max-width: 46rem; }
   }
-  a { color: #000; }
+  a { color: var(--fg); }
 
   header { text-align: center; margin-bottom: 2.5rem; }
   .title { font-size: 1.9rem; font-weight: normal; line-height: 1.25; margin: 0 0 1.2rem; }

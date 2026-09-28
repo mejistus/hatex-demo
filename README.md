@@ -18,6 +18,8 @@ git submodule update --remote hatex/demo
 git commit -am "hatex demo: update" && git push
 ```
 
+`theme.css` and `theme.js` give every page the light and dark themes of the HaTeX project page, with the same button and the same remembered choice, so the whole site is either light or dark. The rendered documents follow through HaTeX's `data-theme`.
+
 To preview locally, run `python3 -m http.server` in this folder and open <http://localhost:8000/>.
 
 Released under the [MIT License](LICENSE). The classical text in `zh/` (楊衒之, 6th century) is in the public domain.

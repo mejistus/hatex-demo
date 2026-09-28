@@ -8,25 +8,26 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <title>HaTeX demos</title>
 <meta name="description" content="Three documents rendered in the browser by HaTeX: a two-column paper, a classical Chinese text set like an old book, and a beamer slide deck.">
+<link rel="stylesheet" href="theme.css">
+<script src="theme.js"></script>
 <style>
-  :root { color-scheme: light; }
-  body { margin: 0; background: #fff; color: #111; font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
   main { max-width: 44rem; margin: 0 auto; padding: 3.5rem 1.25rem 4rem; }
   a { color: inherit; }
   h1 { font-size: 1.8rem; margin: 0 0 0.4rem; }
-  .lead { color: #555; margin: 0 0 2rem; }
+  .lead { color: var(--grey); margin: 0 0 2rem; }
   ul { list-style: none; padding: 0; margin: 0; }
-  li { padding: 1rem 0; border-top: 1px solid #ddd; }
-  li:last-child { border-bottom: 1px solid #ddd; }
+  li { padding: 1rem 0; border-top: 1px solid var(--line); }
+  li:last-child { border-bottom: 1px solid var(--line); }
   li a { font-size: 1.1rem; font-weight: 600; }
   .kind {
     display: inline-block; margin-right: 0.55rem; padding: 0.05rem 0.45rem; vertical-align: 0.12em;
     font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
-    color: #555; border: 1px solid #ccc; border-radius: 0.25rem;
+    color: var(--grey); border: 1px solid var(--line); border-radius: 0.25rem;
   }
-  li p { margin: 0.3rem 0 0; color: #555; font-size: 0.95rem; }
+  li p { margin: 0.3rem 0 0; color: var(--grey); font-size: 0.95rem; }
   code { font: 0.88em ui-monospace, "SF Mono", Menlo, monospace; }
-  footer { margin-top: 2.5rem; font-size: 0.85rem; color: #555; }
+  footer { margin-top: 2.5rem; font-size: 0.85rem; color: var(--grey); }
 </style>
 </head>
 <body>

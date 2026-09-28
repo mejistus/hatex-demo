@@ -1,0 +1,38 @@
+/* Light and dark for the demo pages, in the colours of the HaTeX project
+   page. The rendered documents follow through HaTeX's data-theme, which
+   theme.js sets on <html>. */
+:root {
+  color-scheme: light;
+  --bg: #fff;
+  --fg: #111;
+  --ink: #000;
+  --soft: #f6f6f6;
+  --line: #ddd;
+  --grey: #555;
+  --paper: #fbf8f1;   /* the leaves of vertical text */
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-color="light"]) {
+    color-scheme: dark;
+    --bg: #191817; --fg: #e8e6e3; --ink: #eee; --soft: #242220; --line: #3a3835; --grey: #a8a39c; --paper: #221f1b;
+  }
+}
+:root[data-color="dark"] {
+  color-scheme: dark;
+  --bg: #191817; --fg: #e8e6e3; --ink: #eee; --soft: #242220; --line: #3a3835; --grey: #a8a39c; --paper: #221f1b;
+}
+
+/* The button, top right: a sun in light, a moon in dark. */
+body { position: relative; }
+.theme {
+  position: absolute; top: 1.2rem; right: 1.25rem; z-index: 5;
+  width: 2.1rem; height: 2.1rem; padding: 0;
+  display: grid; place-items: center;
+  color: var(--grey); background: transparent;
+  border: 1px solid var(--line); border-radius: 50%;
+  cursor: pointer; transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+}
+.theme:hover { color: var(--fg); border-color: var(--grey); background: var(--soft); }
+.theme:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.theme svg { width: 1.05rem; height: 1.05rem; display: none; }
+.theme[data-mode="light"] .i-light, .theme[data-mode="dark"] .i-dark { display: block; }
