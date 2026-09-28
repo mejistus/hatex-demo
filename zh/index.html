@@ -10,7 +10,7 @@
 <meta name="description" content="HaTeX 中文示例：以《洛阳伽蓝记》序为例，仿卷子本竖排，双行夹注，旁加句读。">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-<link rel="stylesheet" href="../lib/hatex.css?v=1.9.0">
+<link rel="stylesheet" href="../lib/hatex.css?v=1.10.0">
 <link rel="stylesheet" href="../theme.css?v=1.9.1">
 <script src="../theme.js?v=1.9.1"></script>
 <style>
@@ -26,8 +26,10 @@
   main { max-width: 52rem; margin: 0 auto; padding: 3.5rem 1.25rem 4rem; }
   /* The text fills the window: wide leaves, large characters. */
   main.wide { max-width: 76rem; }
-  .hatex .hatex-guji { --hx-guji-paper: var(--paper); font-size: 1.55rem; }
-  @media (max-width: 600px) { .hatex .hatex-guji { font-size: 1.2rem; } }
+  .hatex .hatex-guji { --hx-guji-paper: var(--paper); font-size: 1.25rem; }
+  @media (max-width: 600px) { .hatex .hatex-guji { font-size: 1.05rem; } }
+  /* Printed, each sheet is a landscape A4 page. */
+  @page { size: A4 landscape; margin: 12mm; }
   a { color: var(--fg); }
   .nav { font-size: 0.85rem; margin: 0 0 2rem; }
 
@@ -96,7 +98,7 @@
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-<script src="../lib/hatex.js?v=1.9.0"></script>
+<script src="../lib/hatex.js?v=1.10.0"></script>
 <script>
   fetch('luoyang.tex')
     .then(r => r.text())
